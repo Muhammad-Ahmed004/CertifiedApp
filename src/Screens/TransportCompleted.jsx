@@ -26,7 +26,7 @@ export default function TransportCompleted({ navigation }) {
                 onPress={() => alert("New Booking")}
             >
                 <Text style={tw`text-white text-center font-bold`}
-                    onPress={() => navigation.navigate("Profile")}>
+                    onPress={() => navigation.navigate("NewBooking")}>
                     +New Booking</Text>
             </TouchableOpacity>
 
