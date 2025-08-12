@@ -24,7 +24,6 @@ export default function InspectionScreen() {
         </TouchableOpacity>
       </View>
 
-      {/* Select Body Part Card */}
       <View style={tw`bg-white rounded-xl p-4 shadow border border-gray-200`}>
         <Text style={tw`text-green-800 font-semibold mb-3`}>
           Select Body Part
@@ -35,6 +34,7 @@ export default function InspectionScreen() {
             style={tw`flex-row items-center mb-3`}
             onPress={() => setSelectedPart(part)}
           >
+            
             <View
               style={[
                 tw`w-5 h-5 rounded-full border-2 mr-3`,
