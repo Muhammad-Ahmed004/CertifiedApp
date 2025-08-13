@@ -8,7 +8,7 @@ import {
   ScrollView,
 } from "react-native";
 import tw from "tailwind-react-native-classnames";
-import Icon from "react-native-vector-icons/Ionicons"; // Vector Icons import
+import Icon from "react-native-vector-icons/Ionicons"; 
 
 export default function Profile() {
   const [pushNotifications, setPushNotifications] = useState(true);
@@ -26,12 +26,12 @@ export default function Profile() {
       <View style={tw`border-b border-gray-300 my-2`} />
 
       {/* Profile Picture */}
-    <View style={tw`items-center mt-4`}>
+    <View style={tw`items-center`}>
   <Image
     source={require("../../assets/profile.png")}
     style={tw`w-20 h-20 rounded-full`}
   />
-  <Text style={tw`text-lg font-semibold mt-1`}>Emmie Watson</Text>
+  <Text style={tw`text-lg font-semibold`}>Emmie Watson</Text>
   <Text style={tw`text-gray-500`}>emmie1709@gmail.com</Text>
 </View>
 

@@ -1,16 +1,20 @@
 import React, { useState } from "react";
 import { View, Text, TouchableOpacity, ScrollView } from "react-native";
 import tw from "tailwind-react-native-classnames";
-import { Ionicons, MaterialIcons } from "@expo/vector-icons";
+import Ionicons from "react-native-vector-icons/Ionicons";
+import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
+
 export default function TransportCompleted({ navigation }) {
     const [activeTab, setActiveTab] = useState("Completed");
+
     return (
         <ScrollView
             style={tw`flex-1 bg-white pt-10`}
             contentContainerStyle={tw`pb-20 px-2`}
             showsVerticalScrollIndicator={true}
         >
+            {/* Header */}
             <View style={tw`flex-row justify-between items-center px-5 py-3`}>
                 <Text style={tw`text-green-700 text-lg font-bold`}>
                     Vehicles Transport
@@ -23,11 +27,11 @@ export default function TransportCompleted({ navigation }) {
             {/* New Booking Button */}
             <TouchableOpacity
                 style={tw`bg-green-700 py-3 mx-5 rounded-lg mb-3`}
-                onPress={() => alert("New Booking")}
+                onPress={() => navigation.navigate("NewBooking")}
             >
-                <Text style={tw`text-white text-center font-bold`}
-                    onPress={() => navigation.navigate("NewBooking")}>
-                    +New Booking</Text>
+                <Text style={tw`text-white text-center font-bold`}>
+                    +New Booking
+                </Text>
             </TouchableOpacity>
 
             {/* Tabs */}
@@ -43,10 +47,11 @@ export default function TransportCompleted({ navigation }) {
                     onPress={() => setActiveTab("Completed")}
                 >
                     <Text
-                        style={tw`text-center ${activeTab === "Completed"
+                        style={tw`text-center ${
+                            activeTab === "Completed"
                                 ? "text-green-700 font-bold border-b-2 border-green-700 pb-1"
                                 : "text-gray-500"
-                            }`}
+                        }`}
                     >
                         Completed(1)
                     </Text>
@@ -83,10 +88,12 @@ export default function TransportCompleted({ navigation }) {
                     <View style={tw`border-t border-gray-200 my-3`} />
 
                     {/* Driver Info */}
-                    <View style={tw`flex-row justify-between items-center mt-4`}>              <View style={tw`flex-row items-center`}>
-                        <Text style={tw`ml-2 text-gray-500 text-xs`}>
-                            Driver: James Wilson </Text>
-                    </View>
+                    <View style={tw`flex-row justify-between items-center mt-4`}>
+                        <View style={tw`flex-row items-center`}>
+                            <Text style={tw`ml-2 text-gray-500 text-xs`}>
+                                Driver: James Wilson
+                            </Text>
+                        </View>
                         <View style={tw`flex-row items-center`}>
                             <MaterialIcons name="access-time" size={16} color="gray" />
                             <Text style={tw`ml-2 text-gray-500 text-xs`}>
@@ -96,9 +103,7 @@ export default function TransportCompleted({ navigation }) {
                     </View>
                     <View style={tw`flex-row mt-2`}>
                         <Ionicons name="call" size={16} color="green" />
-                        <Text style={tw`ml-2 text-green-600 `}>
-                            +61 400 123 456
-                        </Text>
+                        <Text style={tw`ml-2 text-green-600`}>+61 400 123 456</Text>
                     </View>
 
                     {/* Divider */}
