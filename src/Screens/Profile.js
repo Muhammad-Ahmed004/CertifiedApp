@@ -34,8 +34,6 @@ export default function Profile() {
   <Text style={tw`text-lg font-semibold`}>Emmie Watson</Text>
   <Text style={tw`text-gray-500`}>emmie1709@gmail.com</Text>
 </View>
-
-
       {/* My Account */}
       <View style={tw`bg-white m-4 p-2 rounded-lg border border-gray-200 -mb-2`}>
         <Text style={tw`text-yellow-600 font-semibold`}>My Account</Text>
